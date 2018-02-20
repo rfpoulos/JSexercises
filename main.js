@@ -106,3 +106,27 @@ var sumNumbers = function(number) {
     return total;
 }
 console.log(sumNumbers([1, 2, 3, 4, 5]));
+
+var findPositive = function(numbers) {
+    return numbers.filter(number => number > 0);
+}
+
+console.log(findPositive([-1, 1, 2, 3, 4, 0]))
+
+var sumMatrix = function(matrix) {
+    newArray = matrix[0];
+    console.log(matrix.length);
+    console.log(matrix[0].length);
+    console.log(matrix[0][0].length);
+    console.log(matrix[0][0][0].length);
+    for (var i = 1; i < matrix.length; i++) {
+        for (var j = 0; j < matrix[0].length; j++) {
+            for (var k = 0; k < matrix[0][0].length; k++) {
+                newArray[j][k] += matrix[i][j][k];
+            };
+        };
+    };
+    return newArray;
+};
+
+console.log(sumMatrix([[[1, 3], [2, 4]], [[5, 2], [1, 0]], [[1, 1], [1, 1]]]));
