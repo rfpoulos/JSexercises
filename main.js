@@ -115,10 +115,6 @@ console.log(findPositive([-1, 1, 2, 3, 4, 0]))
 
 var sumMatrix = function(matrix) {
     newArray = matrix[0];
-    console.log(matrix.length);
-    console.log(matrix[0].length);
-    console.log(matrix[0][0].length);
-    console.log(matrix[0][0][0].length);
     for (var i = 1; i < matrix.length; i++) {
         for (var j = 0; j < matrix[0].length; j++) {
             for (var k = 0; k < matrix[0][0].length; k++) {
