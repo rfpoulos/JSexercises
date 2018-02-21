@@ -53,7 +53,7 @@ printBanner('This is a test!')
 var factorize = function(number) {
     var factors = []
     for (var i = 0; i <= number/2; i++) {
-        if (number % i == 0) {
+        if (number % i === 0) {
             factors.push(i)
         }
     }
@@ -74,7 +74,7 @@ var leetSpeak = function(sentence) {
     };
     leetSentence = []
     for (var i = 0; i < sentence.length; i++) {
-        if (leet[sentence[i].toLowerCase()] == undefined) {
+        if (leet[sentence[i].toLowerCase()] === undefined) {
             leetSentence.push(sentence[i]);
         }
         else {
@@ -89,7 +89,7 @@ var longLongVowels = function(word) {
     var vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
     newWord = [word[0]]
     for (var i = 1; i < word.length; i++) {
-        if (word[i] == word[i - 1] && vowels[word[i].toLowerCase()] != -1) {
+        if (word[i] === word[i - 1] && vowels[word[i].toLowerCase()] !== -1) {
             newWord.push(word[i] + word[i] + word[i]);
         }
         newWord.push(word[i])
@@ -126,3 +126,25 @@ var sumMatrix = function(matrix) {
 };
 
 console.log(sumMatrix([[[1, 3], [2, 4]], [[5, 2], [1, 0]], [[1, 1], [1, 1]]]));
+
+var matrixMultiply = function(matrixA, matrixB) {
+    newArray = []
+    var total = 0;
+    for (var k = 0; k < matrixA.length; k++) {
+        newArray.push([]);
+        for (var j = 0; j < matrixB[0].length; j++) {
+            newArray[k].push([])
+            for (var i = 0; i < matrixA[0].length; i++) {
+                    total += (matrixA[k][i] * matrixB[i][j]);
+            }
+            newArray[k][j] = total;
+            total = 0;
+        }
+    }
+    return newArray;
+
+}
+
+var matrixA = [[1, 1], [1, 1], [1, 1]]
+var matrixB = [[1, 2, 3], [4, 5, 6]]
+console.log(matrixMultiply(matrixA, matrixB));
