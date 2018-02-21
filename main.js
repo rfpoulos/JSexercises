@@ -143,8 +143,38 @@ var matrixMultiply = function(matrixA, matrixB) {
     }
     return newArray;
 
-}
+};
 
-var matrixA = [[1, 1], [1, 1], [1, 1]]
-var matrixB = [[1, 2, 3], [4, 5, 6]]
+var matrixA = [[2, 4], [3, 4]]
+var matrixB = [[5, 2], [3, 1]]
 console.log(matrixMultiply(matrixA, matrixB));
+
+var rockPaperScissors = function(player1throw, player2throw) {
+    if (player1throw === player2throw) {
+        return 'Draw';
+    } else if (player1throw === 'Paper') {
+        if (player2throw === 'Scissors') {
+            return 'Player 2 wins!'
+        } else {
+         return 'Player 1 wins!';
+        }
+    } else if (player1throw === 'Scissors') {
+        if (player2throw === 'Rock'){
+            return 'Player 2 wins!';
+        } else {
+            return 'Player 1 wins!';
+        } 
+    } else if (player1throw === 'Rock') {
+        if (player2throw === 'Paper'){
+            return 'Player 2 wins!';
+        } else {
+            return 'Player 1 wins!';
+        }
+    }
+};
+
+console.log(rockPaperScissors('Rock', 'Scissors'))
+
+var tickTacToe = function(board) {
+    
+};
