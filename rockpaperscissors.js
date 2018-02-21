@@ -22,8 +22,4 @@ var rockPaperScissors = function(player1throw, player2throw) {
     }
 };
 
-console.log(rockPaperScissors('Rock', 'Scissors'))
-
-var tickTacToe = function(board) {
-
-};
+console.log(rockPaperScissors('Rock', 'Scissors'));
